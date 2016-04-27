@@ -1,0 +1,29 @@
+AllCops:
+  TargetRubyVersion: 2.3
+  Include:
+    - '**/Gemfile'
+    - '**/Rakefile'
+  Exclude:
+    - 'bin/*'
+    - 'db/**/*'
+    - 'vendor/**/*'
+    - 'spec/**/*'
+    - 'old/**/**'
+    - 'doc/**/*'
+
+Rails:
+  Enabled: true
+
+Style/Encoding:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+Metrics/MethodLength:
+  Exclude:
+    - db/migrate/*
+
+Output:
+  Exclude:
+    - 'db/seeds.rb'
