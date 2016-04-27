@@ -32,7 +32,7 @@ var Body = React.createClass({
       url: `/api/v1/items/${item.id}`,
       type: 'PUT',
       data: { item: item },
-      success: () => {
+      success: (item) => {
         this.updateItems(item);
       }
     });
