@@ -13,11 +13,19 @@ var NewItem = React.createClass({
   },
   render() {
     return (
-      <div>
-        <h1>New Item</h1>
-        <input ref='name' placeholder='Enter the item name' />
-        <input ref='description' placeholder='Enter the item description' />
-        <button onClick={this.handleClick}>Submit</button>
+      <div className="row">
+        <div className="col-md-6">
+          <h1>New Item</h1>
+          <form className="form-inline">
+            <div className="form-group">
+              <input ref='name' className="form-control" placeholder='Enter the item name' />
+            </div>
+            <div className="form-group">
+              <input ref='description' className="form-control" placeholder='Enter the item description' />
+            </div>
+            <button className="btn btn-success" style={{marginLeft: 5 + 'px'}} onClick={this.handleClick}>Submit</button>
+          </form>
+        </div>
       </div>
     )
   }

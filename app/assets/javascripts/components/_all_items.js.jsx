@@ -8,18 +8,26 @@ var AllItems = React.createClass({
   render() {
     var items = this.props.items.map((item) => {
       return (
-        <div key={item.id}>
-          <Item item={item}
-                handleDelete={this.handleDelete.bind(this, item.id)}
-                handleUpdate={this.onUpdate} />
-        </div>
+        <Item item={item}
+              handleDelete={this.handleDelete.bind(this, item.id)}
+              handleUpdate={this.onUpdate} />
       )
     });
 
     return (
-      <div>
-        {items}
-      </div>
+      <table className='table table-striped'>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          {items}
+        </tbody>
+      </table>
     )
   }
 });
