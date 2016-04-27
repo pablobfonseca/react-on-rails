@@ -16,11 +16,11 @@ var Body = React.createClass({
       url: `/api/v1/items/${id}`,
       method: 'DELETE',
       success: () => {
-        this.removeClient(id);
+        this.removeItem(id);
       }
     });
   },
-  removeClient(id) {
+  removeItem(id) {
     var newItems = this.state.items.filter((item) => {
       return item.id != id;
     });
